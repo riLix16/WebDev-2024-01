@@ -10,3 +10,4 @@ Ao usar o git status, mostra a branch na qual vc esta.
 Ao usar git checkout (nome da branch) vai vc ir pra dentro dela para assim trabalhar nela.
 Toda alteração será mostrada no terceiro icone a direita e mostrará a quantidade de alterações feitas.
 git status mostra oque voce fez de novo caso aja.
+Git commit -m '(anotação)', faz com que os arquivo sejam 'salvos'.
