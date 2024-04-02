@@ -1,0 +1,17 @@
+usa o clone para copiar e então alterar a sua branch
+usa o marge para mesclar a branch main e a copia/clone.
+para vincular a branch remora, usando o git remote add origin (endereção url)
+git push envia o projeto para o repositorio remoto; caso seja a primeira vez, usar o comendo git push -u origin master
+arquivo redme contem uma descrição do que foi feito.
+comandos markdown, cria modificações e personalizações para o site usando comando ex **
+para clonar de fato o repositorio, usar gir clone (colocar o endereço do repositorio/pasta); criar um repositorio para as aulas e outras pros projetos
+ao ter o projeto no github, precisará pegar as atualizações no computador que estará usando na hora, isso usando o git pull(fazer isso em primeiro lugar ao trocar de pc)
+Ao usar o git status, mostra a branch na qual vc esta.
+Ao usar git checkout (nome da branch) vai vc ir pra dentro dela para assim trabalhar nela.
+Toda alteração será mostrada no terceiro icone a direita e mostrará a quantidade de alterações feitas.
+git status mostra oque voce fez de novo caso aja.
+Git commit -m '(anotação)', faz com que os arquivo sejam 'salvos'.
+Para trazer os arquivos e modificações de uma brench para a outra, usa o git merge, que ve a diferença e o mescla com a sua principal(Ex. Feature para a marter, eu preciso fazer o comando na Master)
+no github, no batão code no seu perfil lhe dará o https(ele é .git) do seu repositorio remoto.
+git remote add origin (https do site) vincula o site a sua brench.
+git push -u origin master faz com que a brench seja salva no repositorio remoto.
