@@ -6,4 +6,5 @@ As medidas relativas sempre vai agir conforme o que esta dentro do elemento supe
 para definir o nome da classe, antes vem o '.'; para facilitar, colocar um nome que coadiz com o que vc quer fazer. ex: .cor_da_font{ color: #c7000;}.
 Apos, vc precisará chama ra classeanteriormente criada. ex. ... class= "cor_da_font" ...
 Usar p.fundo{ background color: yellow;}, seria outro exemplo. Ou seja, vc estaria expecificando qual paragrafo vc quer estilizar.
-Voce tambem pode chamar os dois, ficaria: class="fundo cor_da_font"; Usando o espaço para separa as duas classes.
+Voce tambem pode chamar os dois, ficaria: class="fundo cor_da_font"; 
+Usando o espaço para separa as duas classes.

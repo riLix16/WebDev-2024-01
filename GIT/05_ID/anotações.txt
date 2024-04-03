@@ -1,13 +1,15 @@
 Id
 
-Quando queremos selecionar um elemento em especifico e aplicar um comportamento a somente ele, usamos o Id. ex. "no css: #nome_id ; no html: id='nome_id'.
+Quando queremos selecionar um elemento em especifico e aplicar um comportamento a somente ele, usamos o Id.
+ex. "no css: #nome_id ; no html: id='nome_id'.
 Da tambem para aplicar o  comportamento desejado no mais especifico, logo, a conexão de pai e filho tb, de aplica aqui.
 Para selecionar so os paragrafos por exemplo, usamos o 'p' antes do '#'. ou seja, p#nome_id.
 Ex. o body inteiro pode estar com a cor azul mas especificamente voce pode mudar os elemento paragrafo e mudar a sua cor.
 
 Seletor *
 
-É usado como uma figuração mais generica, perdendo na hierarquia facilmente para algo mais expecifico como o proprio id. ex. table *{...} ou *{...}, para algo mais geral ainda.
+É usado como uma figuração mais generica, perdendo na hierarquia facilmente para algo mais expecifico como o proprio id. ex. table *{...} ou *{...}, 
+para algo mais geral ainda.
 
 seletor elemento elemento
 

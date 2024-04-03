@@ -1,0 +1,4 @@
+propriedade padding
+
+configura o espaço vazio entre o conteúdo do elemento(geralmente do texto) e a borda. Por padrão vem em zero.
+ex. padding: 1em;. 
