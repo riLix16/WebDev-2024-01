@@ -13,7 +13,8 @@ git status mostra oque voce fez de novo caso aja.
 Git commit -m '(anotação)', faz com que os arquivo sejam 'salvos'.
 
 
-Para trazer os arquivos e modificações de uma brench para a outra, usa o git merge, que ve a diferença e o mescla com a sua principal(Ex. Feature para a marter, eu preciso fazer o comando na Master)
+Para trazer os arquivos e modificações de uma brench para a outra, usa o git merge, que ve a diferença e 
+o mescla com a sua principal(Ex. Feature para a marter, eu preciso fazer o comando na Master)
 no github, no batão code no seu perfil lhe dará o https(ele é .git) do seu repositorio remoto.
 git remote add origin (https do site) vincula o site a sua brench.
 git push -u origin master faz com que a brench seja salva no repositorio remoto.
