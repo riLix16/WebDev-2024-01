@@ -20,7 +20,7 @@ section {
 .img{
     float: left;
     border-style: double;
-    border color: green;
+    border: green;
 }
 
 .Azul{
