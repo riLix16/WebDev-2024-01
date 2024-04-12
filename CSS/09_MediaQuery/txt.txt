@@ -1,0 +1,41 @@
+At-rules
+O CSS tem diversas regras, que são denominadas At-Rules, que são declarações com 
+instruções de como o CSS irá se comportar. At-rules são iniciadas com o sinal de arroba 
+(@), seguido por um identificador e terminando com um ponto-e-vírgula (;). Existem muitas 
+at-rules regulares, que foram implementadas com seu identificador, cada uma com uma sintaxe 
+diferente, por exemplo:
+@charset: define o conjunto de caracteres (codificação) usado pelo CSS.
+@import: informa ao CSS para incluir uma folha de estilos externa.
+@namespace (en-US): informa ao CSS que todo o conteúdo deve ser considerado 
+prefixado com um namespace XML.
+@media: um grupo de regras condicional que é aplicado ao conteúdo caso o
+dispositivo de exibição atenda com a condição de mídia definida (media query).
+@document (en-US): um grupo de regras condicional que é aplicado ao conteúdo
+caso o documento atenda aos critérios da condição definidos.
+@page: descreve o aspecto das mudanças do layout que serão aplicadas ao
+imprimir o documento
+@font-face: descreve o aspecto de uma fonte externa que deve ser baixada.
+@supports (en-US): um grupo de regras condicional que é aplicado ao conteúdo
+caso o navegador atenda aos critérios da condição definidos.
+@keyframes: descreve o aspecto das etapas intermediárias em uma sequência de
+animação CSS. Ele é muito usado para declarar variáveis em CSS.
+@viewport: descreve os aspectos da área de visualização para dispositivos com
+tela pequena.
+@counter-style: define estilos de contador específicos que não fazem parte do
+conjunto predefinido de estilos.
+@property: descreve o aspecto de propriedades e variáveis personalizadas.
+font-feature-values (plus @swash, @ornaments, @annotation, @stylistic,
+@styleset w @character-variant): define nomes comuns na font-variant-alternates
+para recurso ativado de forma diferente no OpenType.
+@color-profile: permite um perfil de cores definido para uso na função color()
+
+Media query
+
+Atualmente, os sites devem se adaptar a diferentes mídias (computador, tablet, celulares, etc.) 
+e é importante que a informação exibida no site seja enquadrada corretamente nas diferentes 
+telas de exibição. Isso é o que chamamos de web design responsivo. Por exemplo, algumas 
+larguras de tela comuns são:
+Smartphones: 320px
+Tablets: 768px
+Netbook e modo de visualização landscape(paisagem) do tablet: 1024px
+Desktop com tela mais larga: 1600px
