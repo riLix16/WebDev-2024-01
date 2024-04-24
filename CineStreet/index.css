@@ -109,8 +109,8 @@ main form label label {
 
 main form input {
     background: #161923;
-    width: 300px;
-    height: 50px;
+    width: 4git 00px;
+    height: 60px;
     padding: 0 0.5rem;
     margin-top: 1rem;
     outline: none;
@@ -122,6 +122,7 @@ main form input {
 
 main form input[type="text"]{
    margin-bottom: 1.1rem;
+   
     border: none;
     border-radius: 15px;
     background: #b1040f;
@@ -131,7 +132,7 @@ main form input[type="text"]{
 }
 
 main form input[type="email"]{
-    margin-bottom: 1.1rem;
+     margin-bottom: 1.1rem;
      border: none;
      border-radius: 15px;
      background: #b1040f;
@@ -141,9 +142,9 @@ main form input[type="email"]{
  }
 
  main form input[type="password"]{
-    margin-bottom: 1.1rem;
+   
      border: none;
-     border-radius: 15px;
+    
      background: #b1040f;
      color: white;
      border: 3px solid #0a1804;
