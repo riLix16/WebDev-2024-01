@@ -1,0 +1,50 @@
+Um site de aparelhos eletronicos e peças voltado para a montagem e aprimoramento de computadores, tendo uma variedade de opções, indo desde daqueles que querem um computador doméstico investindo o minimo possivel e para aquelas que querem fazer diversas atividades e trabalhos que exigem mais da maquina, principalmente no longo prazo.
+
+
+(Cabeçario)
+(PC - ocupando 100% da resolução da tela)Na parte superior direita da nossa página está presente a nossa logomarca, seguindo para a direita, terá um espaço vazio que será usado para fazer pesquisas e achar os produtos na qual você tem em mente. Mais a direita, a opção de "Minha conta", onde estará registrado as suas compras, os produtos favoritados e dentro dessa parte você cadatrará o seu endereço e seu E-mail para podermos entrar em contato após a compra ou se algo acontecer. E a extremidade direita da pagina, a opçaõ de "CARRINHO" que é em forma de botão e ele levará a uma pagina que mostrará os produtos na qual você pretende comprar, porém, antes de finalizar a compra, assim podendo amarzenar os produtos e ter uma visão mais dinâmica dos produtos escolhidos.
+(Tabletes, celulares e PC - ocupando 75% ou menos da tela)Na parte superior direita da pagina haverá uma opção em forma de botão que abrirá uma slide bar lateral e assim, apresentando mais opções. No centro a logomarca e na extremidade direita, a opção de "CARRINHO". A barra de pesquisa ocupará todo o espaço da EXtremidade direita a esquerda, ficando embaixo das três opções/botões anteriores.
+
+(Corpo)
+
+Ocupando todo o espaço da direita a esquerda, haverá imagens de computadores recomendados e computadores que influenciadores usam, as imagens iriam se alterar em forma de carrocel e as imagens seria botões, que ao apertar, irá levar o cliente a pagina de compra com todas as peças/setup correspondente.
+
+Abaixo haverá uma seções que mostra os produtos em promoções, eles estaram lado a lado e nas extremidades terá uma seta para mostrar mais produtos, na extremidade direita haverá uma botão chamado "Ver todos" que levará o cliente para a pagina "Em oferta". Assim prendendo a atenção dos mais leigos e mostrando que bons produtos também são acessiveis.
+
+Abaixo haverá uma seções que mostra os produtos recomendados pela nossa equipe. Os produtos dessa seção são peças,acessorios, etc. presentes em computadores com custo que varia de 2.500 reiais a 5.000 reais. Assim facilitando a compra de leigos que querem aprimorar/trocar de peças ou comprar peças que duraram mais no mercado e que dificilmente pressisará ser trocado mas ainda assim abrangendo os cliente que querem gastar o minimo possivel a aqueles que ja querem gastar mais.
+
+Abaixo haverá uma seções que mostra os produtos que estão sendo mais procurados/vendidos em nosso site.
+
+Abaixo haverá uma seções que mostra os produtos recentemente adicionados no mercado, normalmente sendo os produtos de elite e como qual, com um algo custo.
+
+(Aba lateral)
+
+Na parte superior, a nossa logo e ao lado, um botão para fechar a aba.
+
+Em baixo, terá "CATEGORIAS":Hardware, periféricos, computadores, monitores, cadeiras e Mesas, e finalizando com, marcas.
+
+Abaixo, "AJUDA E CONFIGURAÇÕES": Minha conta, quem somos, atendimento ao cliente, como comprar.
+
+Abaixo, "FIQUE POR DENTRO": nossas redes sociais.
+
+Todas as opções dentro de "CATEGORIAS" terá um botão que ao apertar, mostrará opções mais especificas voltada a categoria escolhida. Ex.Perifericos>Acessorios, caixa de som, microfones, kit teclado e mouse, mpusepad, cabos e adaptadores, controles, etc. E por fim, uma opção em forma de botão:"Ver todos".
+
+
+
+(Rodapé)
+
+Começará com uma mensagem explicando o nosso horário de funcionamento, deixando claro os dias, o horarios que atuamos, e as exceções como feriados. Ao lado o nosso telefone de contato. E por fim, o nosso E-mail de contato.
+
+Embaixo um aviso exclarecendo que somos uma loja digital.
+
+Abaxio, haverá listas, sendo elas: Institucionais, quem somos, parcerias; Duvidas, entrega, garantia, formas de pagamento, como comprar; Ajuda, SAC,fale conosco, termos de aceite, politica de privacidade. Essas listas ficaram lado a lado, uma da outra.
+
+Embaixo, mostrará as formas de pagamentos que aceitamos e abaixo as nossas redes sociais.
+
+Mais abaixo, nocamente aparecerá a nossa logo e embaixo dela os nossos certificados de segurança.
+
+
+(Pagina de pesquisa)
+
+Falta idealizar...
+
