@@ -1,15 +1,13 @@
-let contador = 1;
-while (contador <51){
+let contador = 0;
+while (contador <= 50){
     
     console.log(`Valor = ${contador}`);
     contador ++;
 };
-
-
-let contador2 = 10;
+console.clear("")
+const contador2 = 10;
 do{
-    console.log('Valor ='+ contador2);
-    contador2 --;
-
-
-}while(contador2 = 0);
+    console.log(contador2);
+    contador2--;
+    
+}while(contador2 >= 0);

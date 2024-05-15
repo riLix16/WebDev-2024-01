@@ -2,8 +2,10 @@ Um site de aparelhos eletronicos e peças voltado para a montagem e aprimorament
 
 
 (Cabeçario)
+
 (PC - ocupando 100% da resolução da tela)Na parte superior direita da nossa página está presente a nossa logomarca, seguindo para a direita, terá um espaço vazio que será usado para fazer pesquisas e achar os produtos na qual você tem em mente. Mais a direita, a opção de "Minha conta", onde estará registrado as suas compras, os produtos favoritados e dentro dessa parte você cadatrará o seu endereço e seu E-mail para podermos entrar em contato após a compra ou se algo acontecer. E a extremidade direita da pagina, a opçaõ de "CARRINHO" que é em forma de botão e ele levará a uma pagina que mostrará os produtos na qual você pretende comprar, porém, antes de finalizar a compra, assim podendo amarzenar os produtos e ter uma visão mais dinâmica dos produtos escolhidos.
-(Tabletes, celulares e PC - ocupando 75% ou menos da tela)Na parte superior direita da pagina haverá uma opção em forma de botão que abrirá uma slide bar lateral e assim, apresentando mais opções. No centro a logomarca e na extremidade direita, a opção de "CARRINHO". A barra de pesquisa ocupará todo o espaço da EXtremidade direita a esquerda, ficando embaixo das três opções/botões anteriores.
+
+(Tabletes, celulares e PC - ocupando 75% ou menos da tela) Na parte superior direita da pagina haverá uma opção em forma de botão que abrirá uma slide bar lateral e assim, apresentando mais opções. No centro a logomarca e na extremidade direita, a opção de "CARRINHO". A barra de pesquisa ocupará todo o espaço da EXtremidade direita a esquerda, ficando embaixo das três opções/botões anteriores.
 
 (Corpo)
 
@@ -44,7 +46,7 @@ Embaixo, mostrará as formas de pagamentos que aceitamos e abaixo as nossas rede
 Mais abaixo, nocamente aparecerá a nossa logo e embaixo dela os nossos certificados de segurança.
 
 
-(Pagina de pesquisa)
+(Pagina de pesquisa/filtragem)
 
 Falta idealizar...
 
