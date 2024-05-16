@@ -17,10 +17,9 @@ const funcionarios = [
 
 funcionarios.forEach((funcionario) => console.log(funcionario));
 
-const Quantia = [4800, 5200, 3900,4500,5000];
-
-let filtroSalario = Quantia.filter((Salarios)=> {
-    return Salarios >= 0;
+const funcionariosComAumento = funcionarios.map((funcionario) => {
+    const novoSalario = funcionario.Salario * 1.05; // Aumento de 5%
+    return { Nome: funcionario.Nome, Salario: novoSalario };
 });
 
 console.log(filtroSalario)
