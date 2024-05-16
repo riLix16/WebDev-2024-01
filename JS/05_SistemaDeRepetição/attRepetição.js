@@ -4,10 +4,17 @@ while (contador <= 50){
     console.log(`Valor = ${contador}`);
     contador ++;
 };
-console.clear("")
-const contador2 = 10;
+
+let count =10;
+
 do{
-    console.log(contador2);
-    contador2--;
-    
-}while(contador2 >= 0);
+    console.log(count);
+    count--;
+} while (count >= 1);
+
+for (let i =1; i <=100; i++){
+
+    if(i% 2 ===0){
+        console.log(i);
+    }
+}

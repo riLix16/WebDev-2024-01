@@ -25,11 +25,4 @@ let filtroSalario = Quantia.filter((Salarios)=> {
 
 console.log(filtroSalario)
 
-const newSalario =filtroSalario.map(1.05*5040, 5460, 4095, 4725, 5250)
-
-console.log(newSalario)
-
-const mapText = funcionarios.map((valor) => {
-    return valor.Salario;
-    });
-console.log(mapText)
+const newSalario = filtroSalario.map(1.05*5040, 5460, 4095, 4725, 5250);
