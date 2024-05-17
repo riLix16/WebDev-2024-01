@@ -18,10 +18,15 @@ const funcionarios = [
 funcionarios.forEach((funcionario) => console.log(funcionario));
 
 const funcionariosComAumento = funcionarios.map((funcionario) => {
-    const novoSalario = funcionario.Salario * 1.05; // Aumento de 5%
-    return { Nome: funcionario.Nome, Salario: novoSalario };
+    return {
+        Nome: funcionario.Nome,
+        Salario: funcionario.Salario * 1.05 // Aumento de 5%
+    };
 });
 
-console.log(filtroSalario)
+console.log(funcionariosComAumento);
 
-const newSalario = filtroSalario.map(1.05*5040, 5460, 4095, 4725, 5250);
+let filtroSalario = funcionariosComAumento.filter((Filtro) => {
+    return Filtro >= 5000;
+});
+console.log(filtroSalario);
