@@ -1,0 +1,66 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.atendimento {
+    background-color: #f0f0f0; /* Cor de fundo diferente */
+    padding: 30px;
+    display: flex; /* Utilizando flexbox */
+    justify-content: flex-start; /* Alinhando os itens à esquerda */
+    align-items: center; /* Centralizando verticalmente */
+
+}
+
+.atendimento p {
+    margin: 0; /* Removendo margem padrão dos parágrafos */
+}
+
+.atendimento p:not(:last-child) {
+    margin-right: 33.3%; /* Adicionando espaçamento entre os parágrafos */
+}
+
+.rodape-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: white; /* Cor de fundo das listas */
+    padding: 20px;
+    margin-top: -20px; /* Reduzir espaçamento entre a área de atendimento e as listas */
+}
+
+.grid-item {
+    list-style-type: none;
+}
+
+.grid-item:nth-child(1) {
+    margin-right: auto;
+}
+
+.grid-item:nth-child(2) {
+    margin: 0 auto;
+}
+
+.grid-item:nth-child(3) {
+    margin-left: auto;
+}
+
+.grid-item h4 {
+    margin-bottom: 10px;
+}
+
+.grid-item ul {
+    padding: 0;
+}
+
+.grid-item ul li {
+    margin-bottom: 5px;
+    list-style-type: none; /* Remover bolinhas dos itens da lista */
+}
+
+.grid-item ul li a {
+    text-decoration: none; /* Remover sublinhado padrão dos links */
+    color: black; /* Definir cor do texto dos links */
+}
