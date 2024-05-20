@@ -5,10 +5,16 @@ while (contador <= 50){
     contador ++;
 };
 
+let count =10;
 
-let contador2 = 10;
+do{
+    console.log(count);
+    count--;
+} while (count >= 1);
 
-do {
-    console.log(contador2);
-    contador--;
-} while (contador >= 0);
+for (let i =1; i <=100; i++){
+
+    if(i% 2 ===0){
+        console.log(i);
+    }
+}
