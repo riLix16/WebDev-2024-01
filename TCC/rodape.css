@@ -1,3 +1,4 @@
+
 footer {
     position: fixed;
     bottom: 0;
@@ -6,8 +7,9 @@ footer {
 }
 
 .atendimento {
-    background-color: #f0f0f0; /* Cor de fundo diferente */
+    background-color: #438bff; /* Cor de fundo diferente */
     padding: 30px;
+   
     display: flex; /* Utilizando flexbox */
     justify-content: flex-start; /* Alinhando os itens à esquerda */
     align-items: center; /* Centralizando verticalmente */
@@ -26,7 +28,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    background-color: white; /* Cor de fundo das listas */
+    background-color: gray; /* Cor de fundo das listas */
     padding: 20px;
     margin-top: -20px; /* Reduzir espaçamento entre a área de atendimento e as listas */
 }

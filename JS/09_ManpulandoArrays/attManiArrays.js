@@ -26,7 +26,8 @@ const funcionariosComAumento = funcionarios.map((funcionario) => {
 
 console.log(funcionariosComAumento);
 
-let filtroSalario = funcionariosComAumento.filter((Filtro) => {
-    return Filtro >= 5000;
+let filtroSalario = funcionariosComAumento.filter((filtro) => {
+    return filtro <= 5000;
 });
+
 console.log(filtroSalario);
