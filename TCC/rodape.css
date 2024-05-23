@@ -1,13 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: rgb(63, 62, 62);
+}
+
+.Termos p{
+    z-index: 99;
+    margin-left: 20px;
+    color: white;
+}
+.Termos h1{
+    font-size: 500%;
+    z-index: 99;
+    margin-left: 20px;
+    color: rgb(74, 144, 226);
+}
+.Termos h5{
+    font-size: 200%;
+    z-index: 99;
+    margin-left: 20px;
+    color: rgb(74, 144, 226);
+}
+
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     width: 100%;
 }
 
 .atendimento {
-    background-color: #438bff; /* Cor de fundo diferente */
+    background-color: white; /* Cor de fundo diferente */
     padding: 30px;
    
     display: flex; /* Utilizando flexbox */
@@ -24,11 +51,12 @@ footer {
     margin-right: 33.3%; /* Adicionando espaçamento entre os parágrafos */
 }
 
+
 .rodape-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    background-color: gray; /* Cor de fundo das listas */
+    background-color: rgb(0, 0, 0); /* Cor de fundo das listas */
     padding: 20px;
     margin-top: -20px; /* Reduzir espaçamento entre a área de atendimento e as listas */
 }
@@ -64,5 +92,12 @@ footer {
 
 .grid-item ul li a {
     text-decoration: none; /* Remover sublinhado padrão dos links */
-    color: black; /* Definir cor do texto dos links */
+    color: white; /* Definir cor do texto dos links */
+}
+.grid-item ul li {
+    color: rgb(74, 144, 226);;
+}
+
+.grid-item h4 {
+color: rgb(74, 144, 226);
 }
