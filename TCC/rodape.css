@@ -101,3 +101,19 @@ footer {
 .grid-item h4 {
 color: rgb(74, 144, 226);
 }
+
+
+footer .grid-item a{
+    cursor: pointer;
+    width: 50%;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 7px;
+    background: #b1040f;
+    border: 3px solid #ffffff;
+    transition: all .2s ease-in-out;
+}
+
+footer .grid-item a:hover {
+    background: #1900ff;
+}
