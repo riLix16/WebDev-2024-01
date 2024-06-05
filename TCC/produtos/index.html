@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lista de Produtos</title>
+<style>
+    /* Estilos CSS */
+    body {
+        display: flex;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9; /* Cor de fundo clara */
+        margin: 0;
+        padding: 0;
+    }
+    #filterSection {
+        width: 25%;
+        padding: 20px;
+        background-color: #ffffff; /* Cor de fundo branca para o filtro */
+        border-right: 1px solid #ddd;
+    }
+    #mainContent {
+        width: 75%;
+        padding: 20px;
+    }
+    .product-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .product {
+        width: calc((100% / 3) - 20px);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+    .product img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+    #topButtons {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    button {
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: #007bff; /* Azul vibrante */
+        color: white;
+    }
+    #filterButton {
+        background-color: navy;
+        color: white;
+    }
+    #sortButtons button {
+        background-color: red;
+        color: white;
+    }
+    #productCount {
+        margin: 10px 0;
+        font-weight: bold;
+    }
+    input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px; /* Ajuste do tamanho */
+        height: 20px; /* Ajuste do tamanho */
+        margin: 0; /* Resetando a margem */
+        border: 2px solid gray; /* Borda cinza */
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+        display: inline-block;
+        position: relative;
+    }
+    input[type="checkbox"]:checked {
+        background-color: green;
+        border-color: gray;
+    }
+    input[type="checkbox"]::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: background-color 0.3s;
+    }
+    input[type="checkbox"]:checked::before {
+        background-color: green;
+    }
+</style>
+</head>
+<body>
+
+<div id="filterSection">
+    <button id="filterButton" onclick="toggleFilter()">Filtro</button>
+    <div id="filter">
+        <!-- Filtro de marcas será gerado aqui -->
+    </div>
+</div>
+
+<div id="mainContent">
+    <div id="topButtons">
+        <div id="productCount">
+            <!-- Contagem de produtos será atualizada aqui -->
+        </div>
+        <div id="sortButtons">
+            <button onclick="sortProductsAZ()">Ordenar A-Z</button>
+            <button onclick="sortProductsZA()">Ordenar Z-A</button>
+        </div>
+    </div>
+
+    <div id="productsList" class="product-grid">
+        <!-- Lista de produtos será gerada aqui -->
+    </div>
+</div>
+
+<script>
+    // Dados dos produtos com imagens correspondentes
+    const products = [
+        { name: "Processador Intel Core i9", category: "Intel", image: "https://via.placeholder.com/100" },
+        { name: "Placa de vídeo NVIDIA GeForce RTX 3080", category: "NVIDIA", image: "https://via.placeholder.com/100" },
+        { name: "Memória RAM Corsair Vengeance RGB Pro", category: "Corsair", image: "https://via.placeholder.com/100" },
+        { name: "Placa-mãe ASUS ROG Strix Z590-E", category: "ASUS", image: "https://via.placeholder.com/100" },
+        { name: "SSD Samsung 970 EVO Plus", category: "Samsung", image: "https://via.placeholder.com/100" },
+        { name: "AMD Ryzen 9 5900X", category: "AMD", image: "https://via.placeholder.com/100" },
+        { name: "Placa de vídeo AMD Radeon RX 6900 XT", category: "AMD", image: "https://via.placeholder.com/100" },
+        { name: "Memória RAM Kingston HyperX Fury", category: "Kingston", image: "https://via.placeholder.com/100" },
+        { name: "Placa-mãe MSI MPG B550 Gaming Plus", category: "MSI", image: "https://via.placeholder.com/100" },
+        { name: "SSD WD Blue SN550", category: "Western Digital", image: "https://via.placeholder.com/100" },
+        { name: "Intel Core i7-11700K", category: "Intel", image: "https://via.placeholder.com/100" },
+        { name: "Placa de vídeo NVIDIA GeForce RTX 3090", category: "NVIDIA", image: "https://via.placeholder.com/100" },
+        { name: "Memória RAM G.Skill Trident Z RGB", category: "G.Skill", image: "https://via.placeholder.com/100" },
+        { name: "Placa-mãe Gigabyte Aorus Elite AX", category: "Gigabyte", image: "https://via.placeholder.com/100" },
+        { name: "SSD Crucial MX500", category: "Crucial", image: "https://via.placeholder.com/100" }
+    ];
+
+    // Função para gerar o filtro de marcas
+    function generateFilter() {
+        const filterElement = document.getElementById("filter");
+        const uniqueCategories = [...new Set(products.map(product => product.category))];
+
+        uniqueCategories.forEach(category => {
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.name = "category";
+            checkbox.value = category;
+            checkbox.checked = true; // Por padrão, todas as marcas estarão habilitadas
+            checkbox.addEventListener("change", updateProductsList);
+
+            const label = document.createElement("label");
+            label.textContent = category;
+
+            filterElement.appendChild(checkbox);
+            filterElement.appendChild(label);
+            filterElement.appendChild(document.createElement("br"));
+        });
+    }
+
+    // Função para atualizar a lista de produtos e a contagem com base nos filtros
+    function updateProductsList() {
+        const checkedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(checkbox => checkbox.value);
+
+        const productsList = document.getElementById("productsList");
+        productsList.innerHTML = ""; // Limpar a lista atual
+
+        let visibleProductsCount = 0;
+
+        products.forEach(product => {
+            if (checkedCategories.includes(product.category)) {
+                visibleProductsCount++;
+                const productElement = document.createElement("div");
+                productElement.classList.add("product");
+                
+                // Adicionando a imagem do produto
+                const productImage = document.createElement("img");
+                productImage.src = product.image;
+                productImage.alt = product.name;
+                productElement.appendChild(productImage);
+                
+                // Adicionando o nome do produto
+                const productName = document.createElement("span");
+                productName.textContent = product.name;
+                productElement.appendChild(productName);
+
+                productsList.appendChild(productElement);
+            }
+        });
+
+        // Atualizar a contagem de produtos visíveis
+        document.getElementById("productCount").textContent = `Produtos disponíveis: ${visibleProductsCount}`;
+    }
+
+    // Função para mostrar ou esconder o filtro
+    function toggleFilter() {
+        const filterElement = document.getElementById("filter");
+
+        if (filterElement.style.display === "none") {
+            filterElement.style.display = "block";
+        } else {
+            filterElement.style.display = "none";
+        }
+    }
+
+    // Função para ordenar os produtos de A-Z
+    function sortProductsAZ() {
+        products.sort((a, b) => a.name.localeCompare(b.name));
+        updateProductsList();
+    }
+
+    // Função para ordenar os produtos de Z-A
+    function sortProductsZA() {
+        products.sort((a, b) => b.name.localeCompare(a.name));
+        updateProductsList();
+    }
+
+    // Chamar a função para gerar o filtro e a lista quando a página carregar
+    window.onload = function() {
+        generateFilter();
+        updateProductsList();
+    };
+</script>
+
+</body>
+</html>
