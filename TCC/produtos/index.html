@@ -3,24 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lista de Produtos</title>
+<title>NanuNexus</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
     /* Estilos CSS */
     body {
-        display: flex;
-        font-family: Arial, sans-serif;
+        font-family: 'Roboto', sans-serif;
         background-color: #f4f4f9; /* Cor de fundo clara */
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
+    }
+    header {
+        background-color: #007bff; /* Azul vibrante */
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+    #menuIcon {
+        font-size: 24px;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1001;
+    }
+    #sideBar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    #sideBar a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    #sideBar a:hover {
+        color: #f1f1f1;
+    }
+    #sideBar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    .sideBarSectionTitle {
+        color: white;
+        padding: 10px 15px;
+        font-size: 20px;
+        font-weight: bold;
+        border-bottom: 1px solid #818181;
+        margin-top: 10px;
+    }
+    #contentWrapper {
+        display: flex;
+        width: 100%;
+        margin-top: 70px; /* Ajuste para espaço do cabeçalho fixo */
     }
     #filterSection {
-        width: 25%;
+        width: 20%;
         padding: 20px;
         background-color: #ffffff; /* Cor de fundo branca para o filtro */
         border-right: 1px solid #ddd;
     }
     #mainContent {
-        width: 75%;
+        width: 80%;
         padding: 20px;
     }
     .product-grid {
@@ -29,7 +93,7 @@
         gap: 20px;
     }
     .product {
-        width: calc((100% / 3) - 20px);
+        width: calc(33.333% - 20px); /* Três produtos por linha */
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -104,51 +168,86 @@
     input[type="checkbox"]:checked::before {
         background-color: green;
     }
+    .product-price {
+        margin-top: 5px;
+        font-weight: bold;
+        color: #333;
+    }
 </style>
 </head>
 <body>
 
-<div id="filterSection">
-    <button id="filterButton" onclick="toggleFilter()">Filtro</button>
-    <div id="filter">
-        <!-- Filtro de marcas será gerado aqui -->
-    </div>
+<header>
+    NanuNexus
+</header>
+
+<div id="menuIcon" onclick="openNav()">&#9776;</div>
+
+<div id="sideBar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="sideBarSectionTitle">CATEGORIAS</div>
+    <a href="#">Hardwere</a>
+    <a href="#">Periféricos</a>
+    <a href="#">Computadores</a>
+    <a href="#">Monitores</a>
+    <div class="sideBarSectionTitle">AJUDA E CONFIGURAÇÕES</div>
+    <a href="#">Minha Conta</a>
+    <a href="#">Quem Somos</a>
+    <a href="#">Atendimento ao Cliente</a>
+    <a href="#">Como Comprar</a>
 </div>
 
-<div id="mainContent">
-    <div id="topButtons">
-        <div id="productCount">
-            <!-- Contagem de produtos será atualizada aqui -->
-        </div>
-        <div id="sortButtons">
-            <button onclick="sortProductsAZ()">Ordenar A-Z</button>
-            <button onclick="sortProductsZA()">Ordenar Z-A</button>
+<div id="contentWrapper">
+    <div id="filterSection">
+        <button id="filterButton" onclick="toggleFilter()">Filtro</button>
+        <div id="filter">
+            <!-- Filtro de marcas será gerado aqui -->
         </div>
     </div>
 
-    <div id="productsList" class="product-grid">
-        <!-- Lista de produtos será gerada aqui -->
+    <div id="mainContent">
+        <div id="topButtons">
+            <div id="productCount">
+                <!-- Contagem de produtos será atualizada aqui -->
+            </div>
+            <div id="sortButtons">
+                <button onclick="sortProductsAZ()">Ordenar A-Z</button>
+                <button onclick="sortProductsZA()">Ordenar Z-A</button>
+            </div>
+        </div>
+
+        <div id="productsList" class="product-grid">
+            <!-- Lista de produtos será gerada aqui -->
+        </div>
     </div>
 </div>
 
 <script>
+    // Funções para abrir e fechar a barra lateral
+    function openNav() {
+        document.getElementById("sideBar").style.width = "250px";
+    }
+    function closeNav() {
+        document.getElementById("sideBar").style.width = "0";
+    }
+
     // Dados dos produtos com imagens correspondentes
     const products = [
-        { name: "Processador Intel Core i9", category: "Intel", image: "https://via.placeholder.com/100" },
-        { name: "Placa de vídeo NVIDIA GeForce RTX 3080", category: "NVIDIA", image: "https://via.placeholder.com/100" },
-        { name: "Memória RAM Corsair Vengeance RGB Pro", category: "Corsair", image: "https://via.placeholder.com/100" },
-        { name: "Placa-mãe ASUS ROG Strix Z590-E", category: "ASUS", image: "https://via.placeholder.com/100" },
-        { name: "SSD Samsung 970 EVO Plus", category: "Samsung", image: "https://via.placeholder.com/100" },
-        { name: "AMD Ryzen 9 5900X", category: "AMD", image: "https://via.placeholder.com/100" },
-        { name: "Placa de vídeo AMD Radeon RX 6900 XT", category: "AMD", image: "https://via.placeholder.com/100" },
-        { name: "Memória RAM Kingston HyperX Fury", category: "Kingston", image: "https://via.placeholder.com/100" },
-        { name: "Placa-mãe MSI MPG B550 Gaming Plus", category: "MSI", image: "https://via.placeholder.com/100" },
-        { name: "SSD WD Blue SN550", category: "Western Digital", image: "https://via.placeholder.com/100" },
-        { name: "Intel Core i7-11700K", category: "Intel", image: "https://via.placeholder.com/100" },
-        { name: "Placa de vídeo NVIDIA GeForce RTX 3090", category: "NVIDIA", image: "https://via.placeholder.com/100" },
-        { name: "Memória RAM G.Skill Trident Z RGB", category: "G.Skill", image: "https://via.placeholder.com/100" },
-        { name: "Placa-mãe Gigabyte Aorus Elite AX", category: "Gigabyte", image: "https://via.placeholder.com/100" },
-        { name: "SSD Crucial MX500", category: "Crucial", image: "https://via.placeholder.com/100" }
+        { name: "Processador Intel Core i9", category: "Intel", image: "https://via.placeholder.com/100", price: "R$ 3.000,00" },
+        { name: "Placa de vídeo NVIDIA GeForce RTX 3080", category: "NVIDIA", image: "https://via.placeholder.com/100", price: "R$ 6.500,00" },
+        { name: "Memória RAM Corsair Vengeance RGB Pro", category: "Corsair", image: "https://via.placeholder.com/100", price: "R$ 800,00" },
+        { name: "Placa-mãe ASUS ROG Strix Z590-E", category: "ASUS", image: "https://via.placeholder.com/100", price: "R$ 2.500,00" },
+        { name: "SSD Samsung 970 EVO Plus", category: "Samsung", image: "https://via.placeholder.com/100", price: "R$ 700,00" },
+        { name: "AMD Ryzen 9 5900X", category: "AMD", image: "https://via.placeholder.com/100", price: "R$ 2.900,00" },
+        { name: "Placa de vídeo AMD Radeon RX 6900 XT", category: "AMD", image: "https://via.placeholder.com/100", price: "R$ 7.200,00" },
+        { name: "Memória RAM Kingston HyperX Fury", category: "Kingston", image: "https://via.placeholder.com/100", price: "R$ 750,00" },
+        { name: "Placa-mãe MSI MPG B550 Gaming Plus", category: "MSI", image: "https://via.placeholder.com/100", price: "R$ 1.000,00" },
+        { name: "SSD WD Blue SN550", category: "Western Digital", image: "https://via.placeholder.com/100", price: "R$ 400,00" },
+        { name: "Intel Core i7-11700K", category: "Intel", image: "https://via.placeholder.com/100", price: "R$ 2.500,00" },
+        { name: "Placa de vídeo NVIDIA GeForce RTX 3090", category: "NVIDIA", image: "https://via.placeholder.com/100", price: "R$ 10.000,00" },
+        { name: "Memória RAM G.Skill Trident Z RGB", category: "G.Skill", image: "https://via.placeholder.com/100", price: "R$ 850,00" },
+        { name: "Placa-mãe Gigabyte Aorus Elite AX", category: "Gigabyte", image: "https://via.placeholder.com/100", price: "R$ 1.200,00" },
+        { name: "SSD Crucial MX500", category: "Crucial", image: "https://via.placeholder.com/100", price: "R$ 500,00" }
     ];
 
     // Função para gerar o filtro de marcas
@@ -173,7 +272,7 @@
         });
     }
 
-    // Função para atualizar a lista de produtos e a contagem com base nos filtros
+    // Função para atualizar a lista de produtos com base nos filtros
     function updateProductsList() {
         const checkedCategories = Array.from(document.querySelectorAll('input[name="category"]:checked')).map(checkbox => checkbox.value);
 
@@ -185,6 +284,7 @@
         products.forEach(product => {
             if (checkedCategories.includes(product.category)) {
                 visibleProductsCount++;
+                
                 const productElement = document.createElement("div");
                 productElement.classList.add("product");
                 
@@ -195,22 +295,28 @@
                 productElement.appendChild(productImage);
                 
                 // Adicionando o nome do produto
-                const productName = document.createElement("span");
+                const productName = document.createElement("div");
                 productName.textContent = product.name;
                 productElement.appendChild(productName);
+
+                // Adicionando o preço do produto
+                const productPrice = document.createElement("div");
+                productPrice.classList.add("product-price");
+                productPrice.textContent = product.price;
+                productElement.appendChild(productPrice);
 
                 productsList.appendChild(productElement);
             }
         });
 
-        // Atualizar a contagem de produtos visíveis
-        document.getElementById("productCount").textContent = `Produtos disponíveis: ${visibleProductsCount}`;
+        // Atualizando a contagem de produtos visíveis
+        const productCount = document.getElementById("productCount");
+        productCount.textContent = `Produtos disponíveis: ${visibleProductsCount}`;
     }
 
     // Função para mostrar ou esconder o filtro
     function toggleFilter() {
         const filterElement = document.getElementById("filter");
-
         if (filterElement.style.display === "none") {
             filterElement.style.display = "block";
         } else {
