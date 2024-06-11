@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+.filme {
+    margin-bottom: 20px;
+}
+.titulo {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.estrelas {
+    display: inline-block;
+}
+.estrela {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: gold;
+}
+.estrela.vazia {
+    color: lightgray;
+}
