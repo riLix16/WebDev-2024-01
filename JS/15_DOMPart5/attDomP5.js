@@ -9,19 +9,6 @@ function addItem(e){
     li.className = "list-group-item";
     li.appendChild(document.createTextNode(newItem))
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Definindo uma variável para armazenar os itens
 let itens = [];
 
