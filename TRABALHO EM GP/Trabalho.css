@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.container-fluid{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    text-justify: center;
+    width: 100%;
+    height: auto;
+}
+.navbar-brand{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    text-justify: center;
+    width: auto;
+    height: auto;
+}
+body {
+    background-image: url(19fbd35d-90d9-4784-b287-367519051cb3.png);
+}
+.container img {
+    width: 50px; /* Faz com que a imagem ocupe toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços extras ao redor da imagem */
+    
+    
+}
