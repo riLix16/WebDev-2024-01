@@ -29,3 +29,30 @@ function iniciarCarrossel() {
 }
 
 iniciarCarrossel();
+
+// Funções para abrir e fechar a sidebar
+function abrirSidebar() {
+  document.getElementById("sidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function fecharSidebar() {
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+// Mostrar o botão de voltar ao topo quando o usuário rolar 20px para baixo
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  const topBtn = document.getElementById("topBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+}
+
+// Rolagem suave até o topo da página
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
