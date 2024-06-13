@@ -1,0 +1,8 @@
+Imagens
+
+
+<img scr ''> busca a imagem.
+<Figure> representa o conteúdo independente, frequentemente com uma legenda (<figcaption>).
+'alt:', usado para quando a imagem não puder ser carregada.
+'height:' usado para modificar a altura da imagem.
+'width:' usado para modificar a largura da imagem.
