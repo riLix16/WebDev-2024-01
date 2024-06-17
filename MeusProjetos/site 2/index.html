@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Minha Loja Online</h1>
+            <a href="#" id="carrinho-btn">Carrinho</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="produtos">
+            <article class="produto">
+                <h2>Produto 1</h2>
+                <p>Descrição do Produto 1.</p>
+                <button class="adicionar-btn" data-nome="Produto 1" data-preco="50.00">Adicionar ao Carrinho</button>
+            </article>
+            <article class="produto">
+                <h2>Produto 2</h2>
+                <p>Descrição do Produto 2.</p>
+                <button class="adicionar-btn" data-nome="Produto 2" data-preco="70.00">Adicionar ao Carrinho</button>
+            </article>
+            <!-- Adicione mais produtos conforme necessário -->
+        </section>
+
+        <aside id="carrinho">
+            <h2>Seu Carrinho</h2>
+            <ul id="carrinho-lista">
+                <!-- Itens do carrinho serão adicionados dinamicamente aqui -->
+            </ul>
+            <div id="total-carrinho">
+                <h3>Total: R$ <span id="total-valor">0.00</span></h3>
+                <button id="limpar-carrinho">Limpar Carrinho</button>
+            </div>
+        </aside>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
