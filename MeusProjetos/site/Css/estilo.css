@@ -1,0 +1,421 @@
+/* Estilo global para o site */
+
+/* Definição das cores principais */
+:root {
+  --cor-azul: #007bff;
+  --cor-cinza-claro: #f8f9fa;
+  --cor-cinza-escuro: #343a40;
+  --cor-branco: #ffffff;
+}
+
+/* Estilo global para o site */
+body {
+  font-family: 'Roboto'; /* Fonte Roboto como principal */
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--cor-cinza-escuro);
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-cinza-claro);
+}
+
+/* Estilo para seções principais */
+.main {
+  /* Estilo para ajustar o conteúdo abaixo do cabeçalho */
+  padding-top: 80px; /* Ajuste o valor conforme a altura do cabeçalho */
+}
+
+/* Estilo para links */
+a {
+  color: var(--cor-azul);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*Cabeçalho*/
+/* Estilo para o cabeçalho */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--cor-azul);
+  color: var(--cor-branco);
+  padding: 10px 20px;
+  z-index: 1000;
+  transition: top 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para efeito visual */
+}
+
+/* Estilo para ajustar links no cabeçalho */
+header a {
+  color: var(--cor-branco);
+  text-decoration: none;
+}
+/* Estilo para links no cabeçalho quando hover */
+header a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para o logotipo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 20px;
+  color: var(--cor-branco);
+  text-decoration: none;
+}
+
+/*Imagem, tamanho*/
+.logo img {
+  height: 50px;
+}
+
+/* Estilo para barras de navegação */
+.menu {
+  background-color: var(--cor-cinza);
+  padding: 10px 20px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  margin-right: 20px;
+}
+
+.menu ul li a {
+  color: var(--cor-branco);
+  text-decoration: none;
+  padding: 10px;
+  display: flex; /* Para alinhar ícones com texto */
+  align-items: center; /* Para alinhar ícones com texto */
+}
+
+.menu ul li a:hover {
+  background-color: var(--cor-azul);
+  border-radius: 5px;
+}
+
+.menu ul li .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.menu ul li:hover .submenu {
+  display: block;
+}
+
+.submenu ul {
+  display: block;
+  padding: 0;
+}
+
+.submenu ul li a {
+  padding: 10px 15px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px 0 0 3px;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-left: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0 3px 3px 0;
+}
+
+.user-actions a,
+.cart a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 15px;
+  display: flex; /* Para alinhar ícones com texto */
+  align-items: center; /* Para alinhar ícones com texto */
+}
+
+.user-actions a:hover,
+.cart a:hover {
+  color: #007bff;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart span {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.special-offers {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Estilo para o rodapé */
+footer {
+  background-color: var(--cor-cinza-claro);
+  color: var(--cor-cinza-escuro);
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1,
+footer p {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilo para grades de produtos */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.produto-detalhes,
+#carrinho {
+  padding: 1em;
+}
+
+.produto {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1em;
+  text-align: center;
+}
+
+.produto img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo para botões */
+.botao {
+  background-color: var(--cor-azul);
+  color: var(--cor-branco);
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.botao:hover {
+  background-color: #0056b3; /* Tom mais escuro de azul ao passar o mouse */
+}
+
+/* Estilo do carrossel */
+.carrossel {
+  position: relative;
+  max-width: 85%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carrossel img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo da sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+
+/* Estilo do botão flutuante */
+.topBtn {
+  display: none; /* Oculto por padrão */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.topBtn:hover {
+  background-color: #555;
+}
+
+/* Estilo para formulários */
+.formulario {
+  background-color: var(--cor-branco);
+  padding: 20px;
+  border: 1px solid var(--cor-cinza);
+  border-radius: 5px;
+}
+/* Estilo para ícones */
+.icon {
+  margin-right: 10px;
+}
+
+/* Estilo para navegação principal */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: var(--cor-branco);
+  text-decoration: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  transition: opacity 0.3s;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
+
+/* Estilo para o botão de carrinho */
+.carrinho {
+  margin-left: auto; /* Empurra o carrinho para a direita */
+  color: var(--cor-branco);
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid var(--cor-branco);
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.carrinho:hover {
+  background-color: var(--cor-branco);
+  color: var(--cor-azul);
+}
+
+/* Estilo para ícone do carrinho */
+.carrinho i {
+  margin-right: 5px;
+}

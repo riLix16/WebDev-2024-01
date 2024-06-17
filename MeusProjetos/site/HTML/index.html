@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minha Loja - Início</title>
+    <link rel="stylesheet" href="/MeusProjetos/site/Css/estilo.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="Logo da Loja" /></a>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li>
+            <a href="index.html"><i class="fas fa-home"></i> Início</a>
+          </li>
+          <li>
+            <a href="produtos.html"><i class="fas fa-box"></i> Produtos</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-list"></i> Categorias</a>
+            <ul class="submenu">
+              <li><a href="categoria1.html">Categoria 1</a></li>
+              <li><a href="categoria2.html">Categoria 2</a></li>
+              <li><a href="categoria3.html">Categoria 3</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="promocoes.html"><i class="fas fa-tags"></i> Promoções</a>
+          </li>
+          <li>
+            <a href="blog.html"><i class="fas fa-newspaper"></i> Blog</a>
+          </li>
+          <li>
+            <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+          </li>
+          <li>
+            <a href="sobre.html"
+              ><i class="fas fa-info-circle"></i> Sobre Nós</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Pesquisar..." />
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="user-actions">
+        <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+        <a href="registro.html"><i class="fas fa-user-plus"></i> Registro</a>
+      </div>
+      <div class="cart">
+        <a href="carrinho.html"
+          ><i class="fas fa-shopping-cart"></i> Carrinho
+          <span id="cart-count">0</span></a
+        >
+      </div>
+      <div class="special-offers">
+        <p>Frete grátis para compras acima de R$200!</p>
+      </div>
+    </header>
+
+    <main>
+      <div id="main">
+        <button class="openbtn" onclick="abrirSidebar()">☰</button>
+      </div>
+
+      <!-- Sidebar -->
+      <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="fecharSidebar()"
+          >×</a
+        >
+        <a href="#">Categoria 1</a>
+        <a href="#">Categoria 2</a>
+        <a href="#">Categoria 3</a>
+        <a href="#">Categoria 4</a>
+      </div>
+
+      <div class="carrossel">
+        <div class="slides">
+          <div class="slide">
+            <img src="/MeusProjetos/site/imgs/carrossel1.png" alt="Slide 1" />
+          </div>
+          <div class="slide">
+            <img src="/MeusProjetos/site/imgs/carrossel2.png" alt="Slide 2" />
+          </div>
+          <div class="slide">
+            <img src="/MeusProjetos/site/imgs/carrossel3.png" alt="Slide 3" />
+          </div>
+        </div>
+        <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+        <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+      </div>
+
+      <h2>Produtos</h2>
+      <div class="produtos">
+        <div class="produto">
+          <img src="img/produto1.jpg" alt="Produto 1" />
+          <h3>Produto 1</h3>
+          <p>R$ 100,00</p>
+          <a href="produto.html?id=1" class="botao">Ver detalhes</a>
+        </div>
+        <!-- Adicione mais produtos conforme necessário -->
+      </div>
+
+      <!-- Botão flutuante -->
+      <button onclick="topFunction()" id="topBtn" class="topBtn">↑ Topo</button>
+    </main>
+
+    <footer>
+      <p>© 2024 Minha Loja. Todos os direitos reservados.</p>
+    </footer>
+    <script src="/MeusProjetos/site/JS/script.js"></script>
+  </body>
+</html>
