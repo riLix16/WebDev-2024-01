@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NanuNexus</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header>
+    NanuNexus
+</header>
+
+<div id="menuIcon" onclick="openNav()">&#9776;</div>
+
+<div id="sideBar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="sideBarSectionTitle">CATEGORIAS</div>
+    <a href="#">Hardwere</a>
+    <a href="#">Periféricos</a>
+    <a href="#">Computadores</a>
+    <a href="#">Monitores</a>
+    <div class="sideBarSectionTitle">AJUDA E CONFIGURAÇÕES</div>
+    <a href="#">Minha Conta</a>
+    <a href="#">Quem Somos</a>
+    <a href="#">Atendimento ao Cliente</a>
+    <a href="#">Como Comprar</a>
+</div>
+
+<div id="contentWrapper">
+    <div id="filterSection">
+        <button id="filterButton" onclick="toggleFilter()">Filtro</button>
+        <div id="filter">
+            <!-- Filtro de marcas será gerado aqui -->
+        </div>
+    </div>
+
+    <div id="mainContent">
+        <div id="topButtons">
+            <div id="productCount">
+                <!-- Contagem de produtos será atualizada aqui -->
+            </div>
+            <div id="sortButtons">
+                <button onclick="sortProductsAZ()">Ordenar A-Z</button>
+                <button onclick="sortProductsZA()">Ordenar Z-A</button>
+            </div>
+        </div>
+
+        <div id="productsList" class="product-grid">
+            <!-- Lista de produtos será gerada aqui -->
+        </div>
+    </div>
+</div>
+
+<script src="main.js"> </script>
+
+</body>
+</html>
