@@ -1,0 +1,90 @@
+@charset "utf-8";
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background: gray;
+    color: snow;
+}
+H1{
+    text-align: center;
+    text-decoration: solid;
+    background: black;
+    border: 4px solid;
+    border-color: #555;
+}
+.col1{
+    float: left;
+    width: 50%;
+    padding: 26px;
+    box-sizing: border-box;
+
+}
+
+.col2{
+    float: none;
+    float: left;
+    width: 20%;
+    padding: 26px;
+    box-sizing: border-box content-box;
+}
+
+li{
+    padding: 20px;
+    border-bottom: 20px solid #eee;
+    text-align: center;
+    font-size: 30px;
+}
+
+.Primeiro{
+background: snow;
+color: black;
+font-size: 23px;
+text-align: center;
+list-style-type: none;
+border: 4px solid #555;
+margin: 0;
+padding: 0;
+}
+.header-gold{
+background: gold;
+border-bottom: 4px solid;
+border-color: #555;
+}
+
+.outro{
+background: snow;
+color: black;
+font-size: 23px;
+text-align: center;
+list-style-type: none;
+border: 4px solid #555;
+margin: 0;
+padding: 0;
+}
+.header{
+background: silver;
+border-bottom: 4px solid;
+border-color: #555;
+}
+
+.btn{
+    background-color: rgb(216, 43, 43);
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    
+}
+@media(max-width: 1100px){
+    .col1{
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    .col2{
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}

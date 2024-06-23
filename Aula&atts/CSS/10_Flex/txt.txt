@@ -1,0 +1,30 @@
+Contêiner Flex (Flex Container):
+
+O elemento pai que contém os itens flexíveis.
+É definido com a propriedade display: flex ou display: inline-flex.
+Itens Flexíveis (Flex Items):
+
+Os elementos filhos diretos do contêiner flex.
+Eles podem ser organizados horizontalmente (em linha) ou verticalmente (em coluna).
+São dispostos ao longo do eixo principal (main axis) e do eixo transversal (cross axis) do contêiner flex.
+Eixos (Axes):
+
+O eixo principal (main axis) é a direção principal de layout (horizontal ou vertical), definido pela propriedade flex-direction.
+O eixo transversal (cross axis) é perpendicular ao eixo principal.
+Propriedades do Contêiner Flex:
+
+display: Define o tipo de layout como flexível.
+flex-direction: Determina a direção dos itens flexíveis (row, row-reverse, column, column-reverse).
+flex-wrap: Controla se os itens flexíveis devem ser dispostos em uma única linha ou várias linhas.
+justify-content: Alinha os itens flexíveis ao longo do eixo principal.
+align-items: Alinha os itens flexíveis ao longo do eixo transversal.
+align-content: Controla o alinhamento de linhas quando há espaço extra no eixo transversal.
+Propriedades dos Itens Flexíveis:
+
+flex-grow: Determina a capacidade de expansão do item flexível em relação aos outros itens.
+flex-shrink: Define a capacidade de encolhimento do item flexível quando há falta de espaço.
+flex-basis: Especifica o tamanho inicial do item flexível antes da distribuição do espaço adicional.
+flex: Shorthand para flex-grow, flex-shrink e flex-basis.
+Alinhamento Individual:
+
+align-self: Substitui o alinhamento definido pelo align-items para um item flexível específico.

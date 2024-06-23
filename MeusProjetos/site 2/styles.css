@@ -1,0 +1,93 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    float: right;
+    margin-top: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#produtos {
+    width: 70%;
+}
+
+.produto {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.produto h2 {
+    margin-top: 0;
+}
+
+.adicionar-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.adicionar-btn:hover {
+    background-color: #0056b3;
+}
+
+aside {
+    width: 25%;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+#carrinho h2 {
+    margin-top: 0;
+}
+
+#total-carrinho {
+    margin-top: 20px;
+}
+
+#total-carrinho button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+#total-carrinho button:hover {
+    background-color: #c82333;
+}
