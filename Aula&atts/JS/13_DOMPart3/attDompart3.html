@@ -1,44 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Seções</title>
+    <title>attDomPart3</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        section {
-            margin-bottom: 20px;
-        }
         .highlight {
             background-color: yellow;
         }
-        .marked {
-            border: 2px solid red;
-        }
     </style>
 </head>
-<body><hr>
-    <section id="secao1">
-        <h2>Seção 1</h2>
-        <p>Este é o primeiro parágrafo da seção 1.</p>
-        <p>Este é o segundo parágrafo da seção 1.</p>
-        <p>Este é o terceiro parágrafo da seção 1.</p>
-    </section>
+<body>
+    <div class="container mt-5">
+        <!-- Primeira Seção -->
+        <section id="section1">
+            <h2>Seção 1</h2>
+            <p>Este é o primeiro parágrafo da seção 1.</p>
+            <p>Este é o segundo parágrafo da seção 1.</p>
+            <p>Este é o terceiro parágrafo da seção 1.</p>
+            <button id="btnChangeColor">Mudar Cor do Primeiro Parágrafo</button>
+        </section>
 
-   <hr> <section id="secao2">
-        <h2>Seção 2</h2>
-        <p>Este é o primeiro parágrafo da seção 2.</p>
-        <p>Este é o segundo parágrafo da seção 2.</p>
-        <p>Este é o terceiro parágrafo da seção 2.</p>
-    </section>
+        <!-- Segunda Seção -->
+        <section id="section2" class="mt-5">
+            <h2>Seção 2</h2>
+            <p>Este é o primeiro parágrafo da seção 2.</p>
+            <p>Este é o segundo parágrafo da seção 2.</p>
+            <p>Este é o terceiro parágrafo da seção 2.</p>
+            <button id="btnMarkParagraphs">Marcar Todos os Parágrafos</button>
+        </section>
+    </div>
 
-    <button id="botao1">Seção 1</button>
-    <button id="botao2">Seção 2</button>
-
-    <script src="attDomPart3.js">
-    </script>
+  <script src="attDomPart3.js"></script>
 </body>
 </html>
+
